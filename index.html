@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @font-face {
+            font-family: 'epicfont';
+            src: url('OpenSans-Bold.ttf');
+        }
+        h1 {
+            color: rgb(219, 219, 219);
+            font-family: epicfont;
+            font-size: 150px;
+            margin: 0 auto;
+            text-align: center;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.61);
+            width: auto;
+
+        }
+        h2 {
+            color: rgb(219, 219, 219);
+            font-family: epicfont;
+            font-size: 60px;
+            margin: 0 auto;
+            text-align: center;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.61);
+        }
+        body{
+            background-color: rgb(34, 34, 34);
+        }
+    </style>
+    <title>New Tab</title>
+</head>
+<body>
+    <h1 id="time">Time should be here lol</h1>
+    <h2 id="date">Date might be here idk</h2>
+    <script>
+        var fulldate = new Date();
+        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', "Oct", 'Nov', 'Dec'];
+        
+        var date = months[(fulldate.getMonth())] + ' ' + fulldate.getDate();
+        var hrs = fulldate.getHours();
+        var mins = fulldate.getMinutes();
+
+        if(mins < 10) {
+            document.getElementById('time').innerHTML = hrs + ':0' + mins;
+        } else {
+            document.getElementById('time').innerHTML = hrs + ':' + mins;
+        }
+        
+        document.getElementById('date').innerHTML = date;
+    </script>
+        <a
+            href="https://github.com/"
+            class=""
+        >
+            <i class="qlink__icon" data-feather="github"></i>
+        </a>
+        <a
+            target="blank"
+            href="https://mail.google.com/"
+            class="qlink__link qlink__link-2"
+        >
+            <i class="qlink__icon" data-feather="mail"></i>
+        </a>
+        <a
+            target="blank"
+            href="https://calendar.google.com/calendar/r"
+            class="qlink__link qlink__link-3"
+        >
+            <i class="qlink__icon" data-feather="calendar"></i>
+        </a>
+        <a
+            target="blank"
+            href="https://play.google.com/music/"
+            class="qlink__link qlink__link-4"
+        >
+            <i class="qlink__icon" data-feather="music"></i>
+        </a>
+        <a
+            href="https://classroom.google.com/u/1"
+            target="blank"
+            class="qlink__link qlink__link-5"
+        >
+            <i class="qlink__icon" data-feather="trello"></i>
+        </a>
+        <a
+            href="https://www.youtube.com/"
+        >
+            <i class="qlink__icon" data-feather="youtube"></i>
+        </a>
+    <script>
+        feather.replace();
+    </script>
+</body>
